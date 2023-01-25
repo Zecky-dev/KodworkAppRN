@@ -20,7 +20,7 @@ const App = () => {
                 name="JobsRouterScreen"
                 component={JobsRouter}
                 options={{
-                    title: 'JobsRouter',
+                    title: 'Jobs',
                     drawerIcon: ({focused}) => {
                         if (focused) {
                             return <Icon name="list" size={28} color="crimson"/>;

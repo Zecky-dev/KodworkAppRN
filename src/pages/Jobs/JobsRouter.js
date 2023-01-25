@@ -20,7 +20,7 @@ const JobsRouter = () => {
         <Stack.Screen
         name="JobDetailsScreen"
         component={JobDetail}
-        options={{title:'Details'}}
+        options={{headerShown:false}}
         />
     </Stack.Navigator>
     );
