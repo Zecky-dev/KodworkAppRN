@@ -41,5 +41,10 @@ export default StyleSheet.create({
     },
     favButtonContainer: {
         flex: 1,
+    },
+    middle: {
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'center',
     }
 });

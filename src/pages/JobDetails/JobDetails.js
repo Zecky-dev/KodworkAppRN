@@ -11,15 +11,19 @@ import styles from './JobDetails.style';
 import CustomButton from '../../components/CustomButton/CustomButton';
 
 // Redux
-import { useDispatch } from 'react-redux';
-import { addFavorite } from '../../context/slices/favoriteJobsSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { addFavorite, removeFavorite } from '../../context/slices/favoriteJobsSlice';
 
 const JobDetails = ({navigation,route}) => {
     const job = route.params.item;
+    const favoriteList = useSelector(state => state.favorites.list);
     const dispatch = useDispatch();
-    const addToFavorite = () => {
+    const addToFavorites = () => {
         dispatch(addFavorite(job));
         navigation.goBack();
+    };
+    const removeFromFavorites = () => {
+        dispatch(removeFavorite(job.id));
     };
     return (
         <View style={styles.container}>
@@ -38,7 +42,11 @@ const JobDetails = ({navigation,route}) => {
             <WebView source={{html:`${job.contents}`}}/>
             <View style={styles.buttonsContainer}>
                 <CustomButton size={18} color="white" backgroundColor="crimson" label="Submit" iconName="send"/>
-                <CustomButton size={18} color="white" backgroundColor="crimson" label="Add Favorite" iconName="heart" onPress={addToFavorite}/>
+                {
+                    !favoriteList.includes(job)
+                    ? <CustomButton size={18} color="white" backgroundColor="crimson" label="Add Favorite" iconName="heart" onPress={addToFavorites}/>
+                    : <CustomButton size={18} color="white" backgroundColor="crimson" label="Remove Favorite" iconName="trash" onPress={removeFromFavorites}/>
+                }
             </View>
         </View>
     );
