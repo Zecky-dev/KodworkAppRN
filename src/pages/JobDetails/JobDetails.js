@@ -10,9 +10,17 @@ import styles from './JobDetails.style';
 // custom button
 import CustomButton from '../../components/CustomButton/CustomButton';
 
+// Redux
+import { useDispatch } from 'react-redux';
+import { addFavorite } from '../../context/slices/favoriteJobsSlice';
 
-const JobDetails = ({route}) => {
+const JobDetails = ({navigation,route}) => {
     const job = route.params.item;
+    const dispatch = useDispatch();
+    const addToFavorite = () => {
+        dispatch(addFavorite(job));
+        navigation.goBack();
+    };
     return (
         <View style={styles.container}>
             <Text style={styles.jobTitle}>
@@ -30,7 +38,7 @@ const JobDetails = ({route}) => {
             <WebView source={{html:`${job.contents}`}}/>
             <View style={styles.buttonsContainer}>
                 <CustomButton size={18} color="white" backgroundColor="crimson" label="Submit" iconName="send"/>
-                <CustomButton size={18} color="white" backgroundColor="crimson" label="Add Favorite" iconName="heart"/>
+                <CustomButton size={18} color="white" backgroundColor="crimson" label="Add Favorite" iconName="heart" onPress={addToFavorite}/>
             </View>
         </View>
     );

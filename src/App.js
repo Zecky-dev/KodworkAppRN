@@ -12,10 +12,16 @@ import FavoriteJobs from './pages/FavoriteJobs/FavoriteJobs';
 // Icon package import
 import Icon from 'react-native-vector-icons/Ionicons';
 
+// Redux
+import { Provider } from 'react-redux';
+import store from './context/store';
+
+
 const App = () => {
     return (
-        <NavigationContainer>
-            <Drawer.Navigator>
+        <Provider store={store}>
+            <NavigationContainer>
+                <Drawer.Navigator>
                 <Drawer.Screen
                 name="JobsRouterScreen"
                 component={JobsRouter}
@@ -46,8 +52,9 @@ const App = () => {
                     },
                 }}
                 />
-            </Drawer.Navigator>
-        </NavigationContainer>
+                </Drawer.Navigator>
+            </NavigationContainer>
+        </Provider>
     );
 };
 

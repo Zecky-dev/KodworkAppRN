@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
+    // Job card css
     container: {
         backgroundColor: 'white',
         padding: 8,
@@ -37,5 +38,8 @@ export default StyleSheet.create({
     level:{
         color:'crimson',
         fontWeight:'bold',
+    },
+    favButtonContainer: {
+        flex: 1,
     }
 });

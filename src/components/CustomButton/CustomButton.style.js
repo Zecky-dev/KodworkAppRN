@@ -9,5 +9,5 @@ export default StyleSheet.create({
     },
     label: {
         marginHorizontal: 8,
-    }
+    },
 });
