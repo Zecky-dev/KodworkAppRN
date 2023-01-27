@@ -19,7 +19,7 @@ function useFetch(apiUrl){
                 setLoading(false);
                 setError(err);
             }
-        }
+        };
         getData();
     }, []
     );

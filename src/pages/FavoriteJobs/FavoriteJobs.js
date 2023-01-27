@@ -1,5 +1,6 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {View,Text,FlatList} from 'react-native';
+import {View,FlatList} from 'react-native';
 
 // Redux useSelector
 import { useSelector } from 'react-redux';
@@ -21,8 +22,6 @@ const FavoriteJobs = () => {
                 ListEmptyComponent={<Empty/>}
                 contentContainerStyle={{flexGrow:1}}
             />
-
-            {/*<FavoriteCard item={favoriteList[0]}/>*/}
         </View>
     );
 };

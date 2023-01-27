@@ -1,6 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from 'react';
-import {View,Text,FlatList} from 'react-native';
+import React from 'react';
+import {FlatList} from 'react-native';
 
 // import custom fetch hook
 import useFetch from '../../hooks/useFetch';

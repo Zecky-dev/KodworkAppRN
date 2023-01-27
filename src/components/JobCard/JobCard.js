@@ -22,7 +22,7 @@ const JobCard = ({item,onPress}) => {
                     {item.company.name}
                 </Text>
                 {
-                    favoriteList.includes(item) 
+                    favoriteList.includes(item)
                     ? <Icon name="heart" color="crimson" size={32}/>
                     : null
                 }
