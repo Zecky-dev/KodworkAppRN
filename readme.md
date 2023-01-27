@@ -16,22 +16,32 @@ npx react-native run-android
 
 ## Screenshots
 ---
+<!-- prettier-ignore -->
 <table>
-<tr>
-<th align="center">
-<img width="441" height="1">
-<p> 
-<th align="center">
-<img width="441" height="1">
-<p> 
-
-<tr>
-<td align="center">
-Column 1
-</td>
-<td align="center">
-Column 2
-</td>
-</tr>
+    <tbody>
+        <tr>
+        <td width="500px">
+            <img src="https://github.com/Zecky-dev/KodworkAppRN/blob/main/screenshots/1.jpg?raw=true"/>
+        </td>
+        <td width="500px">
+            <img src="https://github.com/Zecky-dev/KodworkAppRN/blob/main/screenshots/2.jpg?raw=true"/>
+        </td>
+        </tr>
+        <tr>
+        <td width="500px">
+            <img src="https://github.com/Zecky-dev/KodworkAppRN/blob/main/screenshots/3.jpg?raw=true"/>
+        </td>
+        <td width="500px">
+            <img src="https://github.com/Zecky-dev/KodworkAppRN/blob/main/screenshots/4.jpg?raw=true"/>
+        </td>
+        </tr>
+        <tr>
+        <td width="500px">
+            <img src="https://github.com/Zecky-dev/KodworkAppRN/blob/main/screenshots/5.jpg?raw=true"/>
+        </td>
+        <td width="500px">
+            <img src="https://github.com/Zecky-dev/KodworkAppRN/blob/main/screenshots/6.jpg?raw=true"/>
+        </td>
+        </tr>
+</tbody>
 </table>
-
