@@ -16,5 +16,22 @@ npx react-native run-android
 
 ## Screenshots
 ---
+<table>
+<tr>
+<th align="center">
+<img width="441" height="1">
+<p> 
+<th align="center">
+<img width="441" height="1">
+<p> 
 
+<tr>
+<td align="center">
+Column 1
+</td>
+<td align="center">
+Column 2
+</td>
+</tr>
+</table>
 
